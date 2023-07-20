@@ -1,4 +1,4 @@
-package util;
+package stock.util;
 
 public class MathUtil {
 }
