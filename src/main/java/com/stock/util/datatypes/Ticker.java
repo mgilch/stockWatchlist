@@ -4,7 +4,7 @@ public class Ticker {
 
     final String ticker;
 
-    Ticker(String name) {
+    public Ticker(String name) {
         this.ticker = name;
     }
 

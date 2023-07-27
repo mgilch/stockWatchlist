@@ -6,12 +6,13 @@ public class Stock {
     String name;
     Ticker ticker;
     StockHistory history;
+    StockDetails details;
 
     Stock(String fullName) {
         this.name = fullName;
     }
 
-    Stock(Ticker ticker) {
+    public Stock(Ticker ticker) {
         this.ticker = ticker;
         this.name = APIHelper.getFullName(ticker);
     }
@@ -19,5 +20,4 @@ public class Stock {
     public StockHistory getHistory() {
         return history;
     }
-
 }

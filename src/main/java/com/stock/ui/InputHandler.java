@@ -3,8 +3,6 @@ package com.stock.ui;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
-import java.awt.Point;
-
 public class InputHandler {
 
     public void handleKeyType(KeyEvent e) {
