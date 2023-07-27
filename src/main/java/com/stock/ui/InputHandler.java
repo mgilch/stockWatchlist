@@ -1,7 +1,6 @@
 package com.stock.ui;
 
 public class InputHandler {
-    InputHandler inputHandler = new InputHandler();
 
     public static void addStock() {
         System.out.println("Stock Added");
