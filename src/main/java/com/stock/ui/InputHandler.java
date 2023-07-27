@@ -10,7 +10,7 @@ public class InputHandler {
         System.out.println("Stock Removed");
     }
 
-    public static void refresh () {
+    public static void refresh() {
         System.out.println("Screen Refreshed");
     }
 }
