@@ -1,6 +1,7 @@
-package stock;
+package com.stock;
 
 
+import com.stock.ui.StockWatchList;
 import javafx.application.Application;
 public class Launcher {
 
