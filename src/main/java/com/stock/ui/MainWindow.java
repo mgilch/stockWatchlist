@@ -9,8 +9,8 @@ import javafx.stage.Stage;
 
 public class MainWindow extends Application {
 
-    public static final float WIDTH = 800;
-    public static final float HEIGHT = 600;
+    //public static final float WIDTH = 800;
+    //public static final float HEIGHT = 600;
 
     @Override
     public void start(Stage primaryStage) {
