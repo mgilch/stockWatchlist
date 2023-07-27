@@ -1,13 +1,19 @@
 package com.stock;
 
-import javafx.scene.Scene;
+import com.stock.ui.UI;
+import javafx.scene.Group;
 import javafx.scene.canvas.Canvas;
 
 public final class StockWatchList {
-    public StockWatchList(Canvas canvas, Scene rootScene) {
+    UI ui;
+
+    Thread worker = new Thread();
+    public StockWatchList(Canvas canvas, Group root) {
+        ui = new UI(canvas, root);
     }
 
     public void run() {
+
         System.out.println("Hello Stock Market");
     }
 }

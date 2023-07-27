@@ -1,16 +1,25 @@
 package com.stock.ui;
 
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
+
+import java.awt.Point;
+
 public class InputHandler {
 
-    public static void addStock() {
-        System.out.println("Stock Added");
+    public void handleKeyType(KeyEvent e) {
+        System.out.println("key typed");
     }
 
-    public static void removeStock() {
-        System.out.println("Stock Removed");
+    public void handleKeyPress(KeyEvent e) {
+        System.out.println("key pressed");
     }
 
-    public static void refresh() {
-        System.out.println("Screen Refreshed");
+    public void handleKeyLift(KeyEvent e) {
+        System.out.println("key lifted");
+    }
+
+    public void handleMouseMove(MouseEvent e) {
+
     }
 }

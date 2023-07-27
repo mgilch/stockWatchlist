@@ -1,4 +1,8 @@
 package com.stock.util;
 
-public class MathUtil {
+public final class MathUtil {
+
+    public static double getAverage(){
+        return 2;
+    }
 }
