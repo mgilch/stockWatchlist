@@ -1,10 +1,10 @@
 package com.stock.api;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+//import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-public class TickerSearchResponse {
+/*public class TickerSearchResponse {
 
     @JsonProperty("bestMatches")
     public List<StockMatch> bestMatches;
@@ -39,4 +39,4 @@ public class TickerSearchResponse {
         public String matchScore;
 
     }
-}
+}*/

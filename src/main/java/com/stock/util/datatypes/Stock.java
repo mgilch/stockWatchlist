@@ -8,14 +8,14 @@ public class Stock {
     StockHistory history;
     StockDetails details;
 
-    Stock(String fullName) {
+    public Stock(String fullName) {
         this.name = fullName;
     }
 
-    public Stock(Ticker ticker) {
+    /*public Stock(Ticker ticker) {
         this.ticker = ticker;
         this.name = APIHelper.getFullName(ticker);
-    }
+    }*/
 
     public StockHistory getHistory() {
         return history;

@@ -6,6 +6,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
+import javafx.scene.layout.AnchorPane;
 
 public class UI {
     public Button addButton, removeButton, refreshButton;
@@ -13,38 +14,38 @@ public class UI {
     Canvas canvas;
     GraphicsContext gc;
 
-    public UI(Canvas canvas, Group root) {
+    public UI(Canvas canvas, AnchorPane anchorPane) {
         this.canvas = canvas;
         this.gc = canvas.getGraphicsContext2D();
 
-        int width = (int) root.getLayoutBounds().getWidth();
-        int height = (int) root.getLayoutBounds().getHeight();
-
+        int width = (int) anchorPane.getLayoutBounds().getWidth();
+        int height = (int) anchorPane.getLayoutBounds().getHeight();
 
         addButton = new Button("Add Stock");
         removeButton = new Button("Remove Stock");
         refreshButton = new Button("Refresh");
 
+        addButton.setOnAction(event -> System.out.println("Stock added"));
+        removeButton.setOnAction(event -> System.out.println("Stock removed"));
+        refreshButton.setOnAction(event -> System.out.println("Screen refreshed"));
 
-        removeButton.setOnAction(event -> System.out.println("remove stock"));
-        refreshButton.setOnAction(event -> System.out.println("refresh  stock"));
-
-        refreshButton.setTooltip(new Tooltip("hello"));
+        addButton.setTooltip(new Tooltip("Clicking this button will add a stock to your watchlist"));
+        removeButton.setTooltip(new Tooltip("Clicking this button will remove a stock from your watchlist"));
+        refreshButton.setTooltip(new Tooltip("Clicking this button will refresh the screen and fetch the most up to date stock data"));
 
         // Location of the Button
-        addButton.setLayoutX(width / 4);
-        addButton.setLayoutY(height / 2.25);
+        AnchorPane.setTopAnchor(addButton, anchorPane.getHeight() / 2);
+        AnchorPane.setLeftAnchor(addButton, 150.0);
 
-        removeButton.setLayoutX(width / 2.25);
-        removeButton.setLayoutY(height / 2.25);
+        AnchorPane.setTopAnchor(removeButton, anchorPane.getHeight() / 2);
+        AnchorPane.setLeftAnchor(removeButton, 250.0);
 
-        refreshButton.setLayoutX(width / 1.5);
-        refreshButton.setLayoutY(height / 2.25);
-
+        AnchorPane.setTopAnchor(refreshButton, anchorPane.getHeight() / 2);
+        AnchorPane.setLeftAnchor(refreshButton, 350.0);
 
         textField = new TextField("add stock with ticker");
 
 
-        root.getChildren().addAll(addButton, refreshButton, removeButton, textField);
+        anchorPane.getChildren().addAll(addButton, refreshButton, removeButton, textField);
     }
 }

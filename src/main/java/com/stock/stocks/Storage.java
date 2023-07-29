@@ -14,7 +14,7 @@ public class Storage {
     }
 
 
-    public void addStock(Ticker ticker) {
+    /*public void addStock(Ticker ticker) {
         stocks.add(new Stock(ticker));
-    }
+    }*/
 }

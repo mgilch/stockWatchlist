@@ -1,22 +1,16 @@
 package com.stock.api;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.stock.util.datatypes.Ticker;
+//import com.fasterxml.jackson.core.JsonProcessingException;
+//import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.io.IOException;
+import javax.naming.Name;
 import java.net.MalformedURLException;
-import java.net.URI;
 import java.net.URL;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.time.Duration;
-import java.util.List;
 
 public final class APIHelper {
     public static String API_KEY = System.getenv("API_KEY");
     public static URL ALPHA_VANTAGE_URL;
+    public String name;
 
     static {
         try {
@@ -26,14 +20,15 @@ public final class APIHelper {
         }
     }
 
-    private APIHelper() {
+    private APIHelper(String name) {
+        this.name = name;
     }
 
     /**
      * @param ticker
      * @return the full name of the stock or null if the connection fails
      */
-    public static String getFullName(Ticker ticker) {
+    /*public static <ObjectMapper> String getFullName(Ticker ticker) {
         String name;
         HttpClient client = HttpClient.newBuilder()
                 .version(HttpClient.Version.HTTP_2)
@@ -66,6 +61,9 @@ public final class APIHelper {
 
         System.out.println(name);
 
+        return name;
+    }*/
+    public String returnName() {
         return name;
     }
 }
